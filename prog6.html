@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Student Info</title>
+</head>
+<body>
+  <form>
+    Marks (comma-separated): <input type="text" id="marks"><br><br>
+    <button type="button" onclick="calculate()">Submit</button>
+  </form>
+  <p id="result"></p>
+  <script>
+    function calculate() {
+      let marks = document.getElementById("marks").value.split(',').map(Number);
+      let total = marks.reduce((a, b) => a + b, 0);
+      let avg = total / marks.length;
+      let grade = avg >= 75 ? "A" : avg >= 50 ? "B" : "C";
+      document.getElementById("result").innerText = `Total: ${total}, Average: ${avg}, Grade: ${grade}`;
+    }
+  </script>
+</body>
+</html>

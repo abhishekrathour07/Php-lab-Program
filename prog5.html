@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Date in Words</title>
+</head>
+<body>
+  <h2>Convert Date to Words</h2>
+  <label for="dateInput">Enter a Date (YYYY-MM-DD):</label>
+  <input type="date" id="dateInput">
+  <button onclick="displayDate()">Convert</button>
+  <p id="date"></p>
+  <script>
+    function displayDate() {
+      const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      const inputDate = document.getElementById("dateInput").value;
+      if (!inputDate) {
+        document.getElementById("date").innerText = "Please enter a valid date.";
+        return;
+      }
+      const now = new Date(inputDate);
+      const dateString = `${days[now.getDay()]}, ${now.getDate()} ${months[now.getMonth()]} ${now.getFullYear()}`;
+      document.getElementById("date").innerText = dateString;
+    }
+  </script>
+</body>
+</html>

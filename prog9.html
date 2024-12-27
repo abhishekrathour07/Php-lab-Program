@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Remove Duplicates</title>
+</head>
+<body>
+  <h2>Remove Duplicates from a List</h2>
+  <?php
+    $list = [1, 1, 2, 3, 3, 4];
+    $unique = array_unique($list);
+    echo "Original List: " . implode(", ", $list) . "<br>";
+    echo "Unique List: " . implode(", ", $unique);
+  ?>
+</body>
+</html>

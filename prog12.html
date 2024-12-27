@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Generate CAPTCHA</title>
+</head>
+<body>
+  <h2>Your CAPTCHA</h2>
+  <?php
+    function generateCaptcha($length = 6) {
+      $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+      return substr(str_shuffle($chars), 0, $length);
+    }
+    $captcha = generateCaptcha();
+    echo "<p><strong>$captcha</strong></p>";
+  ?>
+</body>
+</html>

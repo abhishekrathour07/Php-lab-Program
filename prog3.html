@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+    }
+  </style>
+  <title>Dynamic Animation</title>
+</head>
+<body ">
+  <div id="box" style="height: 100vh; width: 100vw;text-align: center; color: white; font-size: 32px; "> Click me for dynamic effect</div>
+  <script>
+    document.getElementById("box").onclick = function () {
+      this.style.transition = "transform 1s, background-color 1s";
+      this.style.transform = "rotate(360deg)";
+      this.style.backgroundColor = "blue";
+    };
+  </script>
+</body>
+</html>

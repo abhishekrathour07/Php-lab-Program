@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <form action="">
+        <h2>FORM VALIDATION</h2>
+        <label for="">Name</label>
+        <input type="text" id="name"><br>
+        <p id="p"></p>
+        <input type="button" value="check" onclick="add()">
+
+    </form>
+
+    <script>
+        function add() {
+            const a = document.getElementById("name").value;
+            const p = document.getElementById("p");
+            const res = eval(a);
+            p.innerHTML = res
+        }
+    </script>
+</body>
+
+</html>

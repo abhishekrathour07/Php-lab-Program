@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Form Validation</title>
+</head>
+
+<body>
+  <form id="userForm">
+    <h2>Form Validation</h2>
+    Name: <input type="text" id="name"><br><br>
+    Email: <input type="email" id="email"><br><br>
+    Mobile: <input type="text" id="mobile"><br><br>
+    <p id="result" style="color: red;"></p>
+    <input type="button" onclick="validate()" value="Submit">
+  </form>
+  <script>
+    function validate() {
+      let name = document.getElementById("name").value.trim();
+      let email = document.getElementById("email").value.trim();
+      let mobile = document.getElementById("mobile").value.trim();
+      let result = document.getElementById("result");
+
+      if (!name || !email || !mobile) {
+        result.innerHTML = "Every field is required.";
+        return;
+      }
+      const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+      if (!emailPattern.test(email)) {
+        result.innerHTML = "Please enter a valid email.";
+        return;
+      }
+
+      const mobilePattern = /^[0-9]{10}$/;
+      if (!mobilePattern.test(mobile)) {
+        result.innerHTML = "Mobile number must be 10 digits.";
+        return;
+      }
+      result.innerHTML = "";
+      alert("Form submitted successfully!");
+    }
+  </script>
+</body>
+
+</html>

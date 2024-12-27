@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sum of N Numbers</title>
+</head>
+<body>
+  <form>
+    Enter N: <input type="number" id="number"><br><br>
+    <button type="button" onclick="findSum()">Calculate</button>
+  </form>
+  <p id="output"></p>
+  <script>
+    function findSum() {
+      let n = parseInt(document.getElementById("number").value);
+      let sum = (n * (n + 1)) / 2;
+      document.getElementById("output").innerText = "Sum: " + sum;
+    }
+  </script>
+</body>
+</html>
