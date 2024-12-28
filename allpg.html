@@ -1,0 +1,416 @@
+55555555555555555555555555
+<html>
+<head>
+  <title>Current Date in Words</title>
+</head>
+<body>
+  <h2>Current Date in Words</h2>
+  <p id="result"></p>
+  <script>
+    const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const now = new Date();// 25-12-2024
+    let result=document.getElementById('result');
+   result.innerHTML= "today is" +months[now.getMonth()]+" "+ now.getDate()+" "+ now.getFullYear();
+  
+  
+  </script>
+</body>
+</html>
+
+
+<!-- 1111111111111111111111111111111111111111111111
+
+<head> 
+    <title>Form Validation</title> 
+</head> 
+<body> 
+    <h2>Contact Form</h2> 
+    <form> 
+       Name:<input type="text" id="name" name="name"><br> 
+       Email:<input type="text" id="email" name="email"><br> 
+       Mobile Number:<input type="text" id="mobile" name="mobile"><br> 
+       Gender:<input type="radio" id="male" name="gender"value="male">Male 
+              <input type="radio" id="female" name="gender" value="female">Female<br> 
+       Hobbies: Reading<input type="checkbox" id="reading" name="hobbies" 
+value="reading"> 
+                Gaming<input type="checkbox" id="gaming" name="hobbies" value="gaming"> 
+       <br> 
+       <input type="submit" value="Submit" onclick="val()"> 
+    </form> 
+    <script> 
+            function val() 
+            { 
+            var name = document.getElementById('name').value; 
+            var email = document.getElementById('email').value; 
+            var mobile = document.getElementById('mobile').value; 
+            if (name.trim()==''||email.trim()==''||mobile.trim()=='') { 
+                alert('Please fill out all fields.'); 
+                return; 
+            } 
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; 
+            if (!emailRegex.test(email)) { 
+                alert('Please enter a valid email address.'); 
+                return; 
+            } 
+                if (mobile.length !== 10 || isNaN(mobile)) { 
+                alert('Please enter a valid 10-digit mobile number.'); 
+                return; 
+            } 
+            console.log('Form submitted successfully!'); 
+        } 
+    </script> 
+</body> 
+</html>
+
+2222222222222222222222222222222222222222222222222222222222222222222
+
+<html> 
+<head> 
+<title>Math Expression Evaluator</title> 
+</head> 
+<body> 
+<h2>Math Expression Evaluator</h2> 
+<form> 
+Enter a Mathematical Expression:<input type="text" id="expression" name="expression"><br> 
+<input type="submit" value="Evaluate" onClick="evaluateExpression()"> 
+</form> 
+<script> 
+function evaluateExpression() { 
+var expressionInput=document.getElementById('expression').value; 
+var res=eval(expressionInput); 
+document.write("Result="+res); 
+} 
+</script> 
+</body> 
+</html> 
+
+333333333333333333333333333333333333333333333333333333333333333333333333333333
+
+<head> 
+    <title>Dynamic Effects Page</title> 
+   <style> 
+       body { 
+           margin: 0; 
+           overflow: hidden; 
+       } 
+      .layer { 
+           position: absolute; 
+           width: 100%; 
+           height: 100%; 
+           transition: transform 1s ease-in-out; 
+       } 
+       #layer1 { 
+           transform: translateY(-100%); 
+           background-color:red; 
+       } 
+       #layer2 { 
+           transform: translateY(100%); 
+           background-color:green; 
+       } 
+
+   </style> 
+</head> 
+<body> 
+   <div class="layer" id="layer1"></div> 
+   <div class="layer" id="layer2"></div> 
+   <script> 
+       document.addEventListener('DOMContentLoaded', function() { 
+           // Animate layers on page load 
+           animateLayer('layer1', 0); 
+           animateLayer('layer2', 0); 
+        }); 
+        function animateLayer(layerId, delay) { 
+            var layer = document.getElementById(layerId); 
+            // Use setTimeout to create a delay before applying the animation 
+            setTimeout(function() { 
+                // Apply animation by setting transform to translateY(0) 
+                layer.style.transform = 'translateY(0)'; 
+            }, delay); 
+        } 
+    </script> 
+</body> 
+</html> 
+
+
+
+4444444444444444444444444444444444444444444444444444444444444444444
+
+<html> 
+<head> 
+    <title>Sum of N Natural Numbers</title> 
+</head> 
+<body> 
+    <h2>Sum of N Natural Numbers</h2> 
+    <p>Enter a positive integer N:</p> 
+    <input type="number" id="inputNumber"> 
+    <button onclick="calculateSum()">Calculate Sum</button> 
+    <p id="result"></p> 
+    <script> 
+        function calculateSum() { 
+            var n = document.getElementById('inputNumber').value; 
+            if (n <= 0) { 
+                alert('Please enter a positive integer.'); 
+                return; 
+            } 
+            n = Number(n); 
+            // Calculate the sum using the formula for the sum of first N natural numbers 
+            var sum = (n * (n + 1)) / 2; 
+            document.getElementById('result').innerHTML = 'Sum of first ' + n + ' natural numbers 
+is: ' + sum; 
+        } 
+    </script> 
+</body> 
+</html>
+
+
+555555555555555555555555555555555555555555555555555555555555555555555555
+<html> 
+<head> 
+    <title>Current Date in Words</title> 
+</head> 
+<body> 
+    <h2>Current Date in Words</h2> 
+    <p id="currentDate"></p> 
+       <script> 
+        // Array of month names 
+        var monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 
+            'September', 'October', 'November', 'December']; 
+        // Get the current date 
+        var currentDate = new Date(); 
+        // Get day, month, and year components 
+        var day = currentDate.getDate(); 
+        var monthIndex = currentDate.getMonth(); 
+        var year = currentDate.getFullYear(); 
+        // Get the month name from the array 
+        var monthName = monthNames[monthIndex]; 
+        // Display the current date in words 
+        var currentDateInWords = 'Today is ' + monthName + ' ' + day + ', ' + year; 
+        document.getElementById('currentDate').innerText = currentDateInWords; 
+    </script> 
+</body> 
+</html> 
+
+
+5555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555555
+
+
+
+6666666666666666666666666666
+
+<html> 
+<head> 
+    <title>Student Information Form</title> 
+</head> 
+<body> 
+    <h2>Student Information</h2> 
+    <form> 
+        Name:<input type="text" id="name" name="name"> 
+        Math Score:<input type="number" id="math" name="math"> 
+        Science Score:<input type="number" id="science" name="science"> 
+        English Score:<input type="number" id="english" name="english" required> 
+        <input type="button" value="Calculate" onclick="calculateResults()"> 
+    </form> 
+    <h3>Results:</h3> 
+    <p>Total Score: <span id="total"></span></p> 
+    <p>Average Score: <span id="average"></span></p> 
+    <p>Result: <span id="result"></span></p> 
+    <p>Grade: <span id="grade"></span></p> 
+    <script> 
+        function calculateResults() { 
+            var math = parseFloat(document.getElementById('math').value); 
+            var science = parseFloat(document.getElementById('science').value); 
+            var english = parseFloat(document.getElementById('english').value); 
+            // Validate if the scores are valid numbers 
+            if(isNaN(math) || isNaN(science) || isNaN(english)){ 
+                alert('Please enter valid numeric scores.'); 
+                return; 
+            } 
+            // Calculate total, average, result, and grade 
+            var total = math + science + english; 
+            var average = total / 3; 
+            var result = (average >= 40) ? 'Pass' : 'Fail'; 
+            var grade; 
+            if (average >= 90) { 
+                grade = 'A'; 
+            } else if (average >= 80) { 
+                grade = 'B'; 
+            } else if (average >= 70) { 
+                grade = 'C'; 
+            } else if (average >= 60) { 
+                grade = 'D'; 
+            } else { 
+                grade = 'F'; 
+            } 
+            document.getElementById('total').innerText = total; 
+            document.getElementById('average').innerText = average.toFixed(2); 
+            document.getElementById('result').innerText = result; 
+            document.getElementById('grade').innerText = grade; 
+        } 
+    </script> 
+</body> 
+</html>
+
+
+
+
+
+777777777777777777777777777777777777777777777777777777777777777777777777
+
+
+<html> 
+<head> 
+    <title>Employee Information Form</title> 
+</head> 
+<body> 
+    <h2>Employee Information</h2> 
+    <form> 
+        Employee Name:<input type="text" id="employeeName" 
+name="employeeName"><br> 
+        Basic Salary:<input type="number" id="basicSalary" name="basicSalary"><br> 
+        HRA Percentage:<input type="number" id="hraPercentage" 
+name="hraPercentage"><br> 
+        DA Percentage:<input type="number" id="daPercentage" name="daPercentage"><br> 
+        Tax Percentage:<input type="number" id="taxPercentage" name="taxPercentage" 
+required><br> 
+        <input type="button" value="Calculate" onclick="calculateSalary()"> 
+    </form> 
+    <h3>Salary Details:</h3> 
+    <p>DA: <span id="da"></span></p> 
+    <p>HRA: <span id="hra"></span></p> 
+    <p>PF: <span id="pf"></span></p> 
+    <p>TAX: <span id="tax"></span></p> 
+    <p>Gross Pay: <span id="grossPay"></span></p> 
+    <p>Deduction: <span id="deduction"></span></p> 
+    <p>Net Pay: <span id="netPay"></span></p> 
+    <script> 
+        function calculateSalary() { 
+            var basicSalary = parseFloat(document.getElementById('basicSalary').value); 
+            var hraPercentage = parseFloat(document.getElementById('hraPercentage').value); 
+            var daPercentage = parseFloat(document.getElementById('daPercentage').value); 
+            var taxPercentage = parseFloat(document.getElementById('taxPercentage').value);
+            if (isNaN(basicSalary) || isNaN(hraPercentage) || isNaN(daPercentage) || 
+isNaN(taxPercentage)) { 
+                alert('Please enter valid numeric values.'); 
+                return; 
+            } 
+            var da = (daPercentage / 100) * basicSalary; 
+            var hra = (hraPercentage / 100) * basicSalary; 
+            var pf = 0.12 * basicSalary;  // Assuming PF is 12% of basic salary 
+            var tax = (taxPercentage / 100) * basicSalary; 
+            var grossPay = basicSalary + da + hra; 
+            var deduction = pf + tax; 
+            var netPay = grossPay - deduction; 
+            // Display the results on the page 
+            document.getElementById('da').innerText = da.toFixed(2); 
+            document.getElementById('hra').innerText = hra.toFixed(2); 
+            document.getElementById('pf').innerText = pf.toFixed(2); 
+            document.getElementById('tax').innerText = tax.toFixed(2); 
+            document.getElementById('grossPay').innerText = grossPay.toFixed(2); 
+            document.getElementById('deduction').innerText = deduction.toFixed(2); 
+            document.getElementById('netPay').innerText = netPay.toFixed(2); 
+        } 
+    </script> 
+</body> 
+</html>
+
+8888888888888888888888888888888888888888888888888888888888888888888888888888
+
+<?php  
+$days=array(0=>"blue",1=>"green", 2=>"red", 3=>"purple", 4=>"yellow", 5=>"cyan", 
+6=>"orange");  
+$today = date('w');  
+        $defaultColor = '#FFFFFF'; 
+            if (array_key_exists($today, $days)) { 
+                    echo '<body style="background-color:' . $days[$today] . '">'; 
+        } else { 
+            return $defaultColor; 
+        } 
+?> 
+
+
+99999999999999999999999999999999999999999999999999999999999999999999999999999
+
+
+<?php 
+    function removeDuplicates($sortedList) { 
+        $length = count($sortedList); 
+        if ($length <= 1) { 
+            return $sortedList;  
+        } 
+        $uniqueList = [$sortedList[0]]; 
+        for ($i = 1; $i < $length; $i++) { 
+            // Compare with the previous element 
+            if ($sortedList[$i] != $sortedList[$i - 1]) { 
+                $uniqueList[] = $sortedList[$i]; 
+            } 
+        } 
+        return $uniqueList; 
+    } 
+    $sortedList = [1, 2, 2, 3, 4, 4, 4, 5, 6, 6, 7]; 
+    $uniqueList = removeDuplicates($sortedList); 
+    echo '<p>Original List: ' . implode(', ', $sortedList) . '</p>'; 
+    echo '<p>Unique List: ' . implode(', ', $uniqueList) . '</p>'; 
+?>
+
+
+
+
+1010101011010000000000000000001000000000000000000000000
+
+<?php 
+    $rows = 5; 
+    for ($i = 1; $i <= $rows; $i++) {  
+            for ($j = 1; $j < $i; $j++) { 
+            echo "&nbsp;"; 
+        }  
+            for ($k = $i; $k <= $rows; $k++) { 
+            echo "*"; 
+        }         
+        echo "<br>"; 
+    } 
+    ?>
+
+    1111111111111111111111111111111111111111111111111111111111111111111111111111111
+    <html> 
+<head> 
+    <title>Search Array Value</title> 
+</head> 
+<body> 
+    <form method="post" action="search.php"> 
+        Enter a value: <input type="text" name="search_value"> 
+        <input type="submit" value="Search"> 
+    </form> 
+</body> 
+</html> 
+ 
+search.php 
+<?php 
+    $array=array("apple", "banana", "cherry", "date", "elderberry", "fig", "grape"); 
+    $search_value=$_POST["search_value"]; 
+    if(in_array($search_value, $array)) { 
+        echo "Value '$search_value' was found in the array."; 
+    } else { 
+        echo "Value '$search_value' was not found in the array."; 
+    } 
+?>
+
+
+
+121212121212121212121212121212121212121222211111111111111111122222222222222
+
+
+
+<?php 
+function generateCaptcha($length) { 
+    // Generate a random alphanumeric string of the specified length 
+    
+$characters='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz01234567
+ 89'; 
+    $captcha=''; 
+    for($i=0;$i<$length;$i++) { 
+        $captcha .=$characters[rand(0,strlen($characters)-1)]; 
+    } 
+    echo "Captcha: $captcha"; 
+} 
+$captchaCode=generateCaptcha(6); 
+?> -->

@@ -4,26 +4,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Practice</title>
+    <title>Document</title>
 </head>
 
 <body>
-    <form action="">
-        <h2>FORM VALIDATION</h2>
-        <label for="">Name</label>
-        <input type="text" id="name"><br>
-        <p id="p"></p>
-        <input type="button" value="check" onclick="add()">
-
-    </form>
-
+    <h2>salary finder</h2>
+    Basic salary: <input type="text" id="salary">
+    <button type="button" onclick="calc()">submit</button>
+    <p id="p"></p>
     <script>
-        function add() {
-            const a = document.getElementById("name").value;
-            const p = document.getElementById("p");
-            const res = eval(a);
-            p.innerHTML = res
+        function calc() {
+            const salary =parseFloat( document.getElementById("salary").value );
+            const hra = salary*0.1,da=salary*0.2 ,pf = salary*0.05;
+            const gross = salary +hra+da, net=gross-pf
+
+            document.getElementById("p").innerHTML = "Gross\t"+gross +"\tnet"+net
         }
+
+
     </script>
 </body>
 
